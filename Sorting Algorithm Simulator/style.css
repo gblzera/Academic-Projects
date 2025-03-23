@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.control-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  width: 150px;
+}
+
+select, input[type="range"], button {
+  width: 150px;
+}
+
+#visualization-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 20px;
+  height: 300px;
+}
+
+.bar {
+  width: 20px;
+  margin: 0 2px;
+  background-color: #4CAF50;
+  transition: height 0.5s ease;
+}
+
+.bar.sorted {
+  background-color: #2196F3;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para os controles de música */
+.music-controls {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.music-controls h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.music-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.music-button {
+  padding: 8px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.volume-control, .music-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.volume-control input, .music-selector select {
+  width: 70%;
+}
+
+#music-select {
+  padding: 5px;
+}
+
+/* Estilos para o player do YouTube */
+.youtube-player {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.youtube-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.youtube-input input {
+  padding: 8px;
+  width: 100%;
+}
+
+#youtube-player-container {
+  margin-top: 15px;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Proporção 16:9 para o vídeo */
+  overflow: hidden;
+}
+
+#youtube-player-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#load-youtube {
+  width: 100%;
+}

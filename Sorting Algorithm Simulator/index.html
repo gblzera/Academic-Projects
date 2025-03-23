@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Algoritmos de Ordenação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simulador de Algoritmos de Ordenação</h1>
+    
+    <div class="controls">
+      <div class="control-group">
+        <label for="algorithm-select">Escolha o Algoritmo:</label>
+        <select id="algorithm-select">
+          <option value="bubble">Bubble Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="quick">Quick Sort</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="array-size">Tamanho do Vetor:</label>
+        <input type="range" id="array-size" min="5" max="100" value="30" step="5">
+        <span id="array-size-value">30</span>
+      </div>
+
+      <div class="control-group">
+        <label for="speed">Velocidade:</label>
+        <input type="range" id="speed" min="10" max="1000" value="200" step="10">
+        <span id="speed-value">200ms</span>
+      </div>
+
+      <div class="control-group">
+        <button id="start-button">Iniciar Algoritmo</button>
+        <button id="reset-button">Reiniciar</button>
+      </div>
+    </div>
+
+    <div id="visualization-container">
+      <!-- Barras de visualização vão aparecer aqui -->
+    </div>
+
+    <p id="status"></p>
+
+    <!-- Controles de música -->
+    <div class="music-controls">
+      <h3>Música de Fundo</h3>
+      
+      <!-- Player de áudio padrão (para MP3) -->
+      <div class="audio-player" id="normal-audio-player">
+        <audio id="background-music" loop>
+          <source src="" type="audio/mpeg">
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+        
+        <div class="music-control-group">
+          <button id="play-music" class="music-button">▶️ Reproduzir</button>
+          <button id="pause-music" class="music-button">⏸️ Pausar</button>
+          
+          <div class="volume-control">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+          </div>
+          
+          <div class="music-selector">
+            <label for="music-select">Escolher Música:</label>
+            <select id="music-select">
+              <option value="">Selecione uma música</option>
+              <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">Música 1</option>
+              <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">Música 2</option>
+              <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">Música 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Player do YouTube -->
+      <div class="youtube-player" id="youtube-player-section">
+        <div class="control-group">
+          <label for="youtube-toggle">Usar YouTube:</label>
+          <input type="checkbox" id="youtube-toggle">
+        </div>
+        
+        <div id="youtube-controls" style="display: none;">
+          <div class="youtube-input">
+            <label for="youtube-url">ID do Vídeo do YouTube:</label>
+            <input type="text" id="youtube-url" placeholder="Ex: dQw4w9WgXcQ">
+            <button id="load-youtube" class="music-button">Carregar</button>
+          </div>
+          
+          <div id="youtube-player-container">
+            <!-- Iframe será inserido aqui pelo JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
