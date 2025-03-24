@@ -1,0 +1,26 @@
+O código fornecido implementa um compressor e descompressor de arquivos usando o algoritmo de Huffman. Ele funciona da seguinte forma:
+
+1. **Compressão**:
+    - Calcula a frequência de cada byte no arquivo de entrada.
+    - Constrói uma árvore de Huffman com base nas frequências.
+    - Gera códigos binários únicos para cada byte com base na árvore.
+    - Serializa a árvore de Huffman e os dados comprimidos no arquivo de saída.
+
+2. **Descompressão**:
+    - Lê a árvore de Huffman serializada e o tamanho original do arquivo.
+    - Decodifica os dados comprimidos usando a árvore de Huffman.
+    - Reconstrói o arquivo original no arquivo de saída.
+
+3. **Estrutura**:
+    - Usa uma classe `HuffmanCompressor` para encapsular a lógica.
+    - A árvore de Huffman é representada por nós (`HuffmanNode`) com ponteiros para os filhos esquerdo e direito.
+    - A compressão e descompressão são realizadas com métodos específicos (`compress` e `decompress`).
+
+4. **Execução**:
+    - O programa é executado via linha de comando com argumentos para o modo (`c` para compressão, `d` para descompressão), arquivo de entrada e arquivo de saída.
+    - Comandos de execução :
+
+    **Compressão**: ./huffman_compressor c nome_do_arquivo.**extensão** nome_do_arquivo.huf
+    **Descompressão**: ./huffman_compressor d nome_do_arquivo.huf nome_do_arquivo.**extensão**
+
+**OBS**: Extensão deve ser a mesma.
