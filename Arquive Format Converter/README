@@ -1,0 +1,20 @@
+Conversor de arquivos que suporta várias conversões entre formatos como `.txt`, `.pdf`, `.docx`, `.xlsx`, `.csv`, entre outros. Ele utiliza bibliotecas como `PyPDF2`, `docx`, `pandas`, e `docx2pdf` para realizar as conversões. A execução pode ser feita via linha de comando.
+
+### Como funciona:
+1. **Entrada**: O usuário fornece o caminho do arquivo de entrada e, opcionalmente, o formato de saída.
+2. **Mapeamento de Conversões**: O código verifica se a conversão entre os formatos é suportada.
+3. **Execução da Conversão**: A função correspondente à conversão é chamada para processar o arquivo.
+4. **Saída**: O arquivo convertido é salvo no mesmo diretório do arquivo de entrada.
+
+### Como executar:
+1. Salve o código em um arquivo chamado `main.py`.
+2. Abra o terminal e navegue até o diretório onde o arquivo está salvo.
+3. Execute o comando:
+    ```
+    python main.py <caminho_do_arquivo_entrada> [formato_saida]
+    ```
+    Exemplo:
+    ```
+    python main.py exemplo.txt pdf
+    ```
+    Isso converterá `exemplo.txt` para `exemplo.pdf`.
